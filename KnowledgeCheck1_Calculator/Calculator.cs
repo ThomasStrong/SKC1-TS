@@ -8,24 +8,37 @@ namespace KnowledgeCheck1_Calculator
 {
     public class Calculator
     {
-        public int Add(int first, int second)
+        public static int Add(int first, int second)
         {
             return first + second;
         }
 
-        public int Subtract(int first, int second)
+        public static int Subtract(int first, int second)
         {
             return first - second;
         }
 
-        public int Multiply(int first, int second)
+        public static int Multiply(int first, int second)
         {
-            throw new NotImplementedException();
+            return first * second;
         }
 
-        public double Divide(double first, double second)
+        public static double Divide(double first, double second)
         {
             return first / second;
+        }
+
+        public static void NotAnInt() =>
+            Console.WriteLine("One or more of the numbers is not an int");
+
+        public static void GetFactors(string type) =>
+            Console.WriteLine($"Enter 2 integers to {type}");
+
+        public static (string, string) GetFactors(string num1, string num2)
+        {
+            var first = num1;
+            var second = num2;
+            return (first, second);
         }
     }
 }
